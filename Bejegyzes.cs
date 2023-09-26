@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace KormosAron_BejegyzesProjekt
 {
@@ -22,7 +23,7 @@ namespace KormosAron_BejegyzesProjekt
             this.Likeok = 0;
             this.Letrejott = DateTime.Now;
             this.Szerkesztve = DateTime.Now;
-            this.Lista = new List<string>();
+            this.Lista = new List<string>(2);
         }
 
         public string Szerzo { get => szerzo; set => szerzo = value; }
@@ -40,6 +41,16 @@ namespace KormosAron_BejegyzesProjekt
         {
             string everything = Environment.NewLine; { everything = "Szerkesztve: " + this.Szerkesztve + this.tartalom; };
             return this.Szerzo + " - " + this.Likeok + " - " + this.Letrejott +  " - " + everything;
+        }
+        public void adatbazis()
+        {
+            StreamReader sr = new StreamReader("bejegyzesek.csv");
+            while(!sr.EndOfStream)
+            {
+                string adat = sr.ReadLine();
+                Lista.Add(adat);
+            }
+            Console.WriteLine(Lista[2]);
         }
     }
 }

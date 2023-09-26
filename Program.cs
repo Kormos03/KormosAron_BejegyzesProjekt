@@ -13,7 +13,7 @@ namespace KormosAron_BejegyzesProjekt
             Bejegyzes bejegyzes = new Bejegyzes("asd", "kfsf");
             bejegyzes.like();           //like hozzáadása
             Console.WriteLine(bejegyzes.ToString());
-
+            bejegyzes.adatbazis();
         }
     }
 }
