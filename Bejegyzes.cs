@@ -14,7 +14,7 @@ namespace KormosAron_BejegyzesProjekt
         private DateTime letrejott;
         private DateTime szerkesztve;
 
-        public Bejegyzes(string szerzo, string tartalom, int likeok, DateTime letrejott, DateTime szerkesztve)
+        public Bejegyzes(string szerzo, string tartalom)
         {
             this.Szerzo = szerzo;
             this.Tartalom = tartalom;
@@ -36,7 +36,7 @@ namespace KormosAron_BejegyzesProjekt
         public override string ToString()
         {
             string everything = Environment.NewLine; { everything = "Szerkesztve: " + this.Szerkesztve; };
-            return this.Szerzo + " - " + this.Likeok + " - " + this.Letrejott + everything;
+            return this.Szerzo + " - " + this.Likeok + " - " + this.Letrejott +  " - " + everything;
         }
     }
 }
