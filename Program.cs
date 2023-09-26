@@ -10,10 +10,9 @@ namespace KormosAron_BejegyzesProjekt
     {
        public static void Main()
         {
-            Bejegyzes bejegyzes = new Bejegyzes("asd", "asdasdf");
+            Bejegyzes bejegyzes = new Bejegyzes("asd", "kfsf");
             bejegyzes.like();           //like hozzáadása
-            List<Bejegyzes> = new List<Bejegyzes>;
-            Console.WriteLine(bejegyzes.Lista.ToString());
+            Console.WriteLine(bejegyzes.ToString());
 
         }
     }

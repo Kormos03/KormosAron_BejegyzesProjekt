@@ -38,7 +38,7 @@ namespace KormosAron_BejegyzesProjekt
         }
         public override string ToString()
         {
-            string everything = Environment.NewLine; { everything = "Szerkesztve: " + this.Szerkesztve; };
+            string everything = Environment.NewLine; { everything = "Szerkesztve: " + this.Szerkesztve + this.tartalom; };
             return this.Szerzo + " - " + this.Likeok + " - " + this.Letrejott +  " - " + everything;
         }
     }
