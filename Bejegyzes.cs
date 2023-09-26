@@ -14,7 +14,7 @@ namespace KormosAron_BejegyzesProjekt
             private int likeok;
             private DateTime letrejott;
             private DateTime szerkesztve;
-            List<Bejegyzes> lista;
+            List<string> lista;
 
         public Bejegyzes(string szerzo, string tartalom)
         {
@@ -23,7 +23,11 @@ namespace KormosAron_BejegyzesProjekt
             this.Likeok = 0;
             this.Letrejott = DateTime.Now;
             this.Szerkesztve = DateTime.Now;
-            this.Lista = new List<Bejegyzes>();
+            this.Lista = new List<string>()
+            {
+                "első szerző; első tartalom",
+                "második szerző; második tartalom"
+            };
         }
 
         public string Szerzo { get => szerzo; set => szerzo = value; }
@@ -31,7 +35,7 @@ namespace KormosAron_BejegyzesProjekt
         public int Likeok { get => likeok; set => likeok = value; }
         public DateTime Letrejott { get => letrejott; set => letrejott = value; }
         public DateTime Szerkesztve { get => szerkesztve; set => szerkesztve = value; }
-        internal List<Bejegyzes> Lista { get => lista; set => lista = value; }
+        internal List<string> Lista { get => lista; set => lista = value; }
 
         public void like()
         {
@@ -47,8 +51,10 @@ namespace KormosAron_BejegyzesProjekt
             StreamReader sr = new StreamReader("bejegyzesek.csv");
             while(!sr.EndOfStream)
             {
+                
                 string adat = sr.ReadLine();
-                Lista.Add(adat.Split(';'));
+                lista.Add(adat);
+                
             }
             Console.WriteLine(Lista[2]);
         }
