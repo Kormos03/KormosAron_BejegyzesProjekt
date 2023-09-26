@@ -24,13 +24,19 @@ namespace KormosAron_BejegyzesProjekt
         }
 
         public string Szerzo { get => szerzo; set => szerzo = value; }
-        public string Tartalom { get => tartalom; set => szerkesztve = DateTime.Now; }
+        public string Tartalom { get => tartalom; set => tartalom = value;} 
         public int Likeok { get => likeok; set => likeok = value; }
         public DateTime Letrejott { get => letrejott; set => letrejott = value; }
         public DateTime Szerkesztve { get => szerkesztve; set => szerkesztve = value; }
+
         public void like()
         {
-            likeok++;
+            Likeok++;
+        }
+        public override string ToString()
+        {
+            string everything = Environment.NewLine; { everything = "Szerkesztve: " + this.Szerkesztve; };
+            return this.Szerzo + " - " + this.Likeok + " - " + this.Letrejott + everything;
         }
     }
 }
