@@ -8,6 +8,11 @@ namespace KormosAron_BejegyzesProjekt
 {
     internal class Bejegyzes
     {
+        private string szerzo;
+        private string tartalom;
+        private int likeok;
+        private DateTime letrejott;
+        private DateTime szerkesztve;
 
     }
 }
