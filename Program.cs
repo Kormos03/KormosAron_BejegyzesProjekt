@@ -12,7 +12,9 @@ namespace KormosAron_BejegyzesProjekt
         {
             Bejegyzes bejegyzes = new Bejegyzes("asd", "asdasdf");
             bejegyzes.like();           //like hozzáadása
-            Console.WriteLine(bejegyzes);
+            List<Bejegyzes> = new List<Bejegyzes>;
+            Console.WriteLine(bejegyzes.Lista.ToString());
+
         }
     }
 }
